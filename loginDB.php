@@ -11,7 +11,7 @@ session_start();
 		<div id="container">
 
 			<div id = "header">
-			<a style=font-family:BradleyHandITC;font-size:14pt; href = "SignUp.html" title="Link to Sign Up Page">Sign Up</a>
+			<a style=font-family:BradleyHandITC;font-size:14pt; href = "signup.html" title="Link to Sign Up Page">Sign Up</a>
 			<a style=font-family:BradleyHandITC;font-size:14pt; href = "loginForm.html" title="Link to Log In Page">Log In</a>
 				<img src = "logo2.png"  alt = "Logo"/>
  <script>
@@ -36,15 +36,15 @@ session_start();
 
 					//echo "You typed " . $username . " " . $password;//shows what user typed in for confirmation
 
-					$con = mysql_connect("localhost:3306","student","college");//gets login details for mysql
+					$con = mysql_connect ("localhost","root","root");//gets login details for mysql
 
 					if (!$con)
 					die('Could not connect: ' . mysql_error());
 
-					mysql_select_db("login2", $con);//gets database from mysql
+					mysql_select_db("user", $con);//gets database from mysql
 
 					//searches the table for record that has the same username as the one that has been typed
-					$result = mysql_query("SELECT * FROM password WHERE Username = '" . $username . "'");
+					$result = mysql_query("SELECT * FROM User WHERE Username = '" . $username . "'");
 
 					$row = mysql_fetch_array($result);//extracts the result and puts it in the variable $row
 

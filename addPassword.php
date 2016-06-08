@@ -8,7 +8,7 @@
 		<div id="container">
 
 			<div id = "header">
-			<a style=font-family:BradleyHandITC;font-size:14pt; href = "SignUp.html" title="Link to Sign Up Page">Sign Up</a>
+			<a style=font-family:BradleyHandITC;font-size:14pt; href = "signup.html" title="Link to Sign Up Page">Sign Up</a>
 			<a style=font-family:BradleyHandITC;font-size:14pt; href = "loginForm.html" title="Link to Log In Page">Log In</a>
 				<img src = "logo2.png"  alt = "Logo"/>
  <script>
@@ -29,20 +29,20 @@
 				<hr>
 				<?php
 
-					$con = mysql_connect ("localhost:3306","student","college");
+					$con = mysql_connect("localhost", "root", "root");
 					//gets login details for mysql
 					if(!$con)
 					{
 					die('Could not connect: ' . mysql_error());
 					}
-					mysql_select_db("login2", $con);
+					mysql_select_db("user", $con);
 					//gets database from mysql
 
 					$username = $_POST['txtUsername'];
 					$password = $_POST['txtPassword'];
 					//gets sign up details from text boxes on the form
 
-					mysql_query("INSERT INTO password (Username, Password) VALUES ('$username', '$password')" , $con);
+					mysql_query("INSERT INTO User (Username, Password) VALUES ('$username', '$password')" , $con);
 					//inputs data into database.
 
 					mysql_close($con);
