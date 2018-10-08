@@ -1,7 +1,7 @@
 # e-Games
 
-During 2nd year of college (2014) I had to design and create a e-commerce site.
+During the 2nd year of college (2014) I was tasked to design and create an e-commerce site.
 
-Developed the site using HTML4 & CSS3.
+I deciced the site should focus on selling computer games. Within the site users can look at games available, create an account and then log in, submit their information in a form to place an <em>'order'</em>.
 
-Users can look at games available, create a account and then log in. And submit there information in a form.
+The shop was developed using HTML4, CSS3, PHP5, MySQL & JavaScript.
