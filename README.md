@@ -1,4 +1,4 @@
-# e-Games
+# e-games
 
 During the 2nd year of college (2014) I was tasked to design and create an e-commerce site.
 
